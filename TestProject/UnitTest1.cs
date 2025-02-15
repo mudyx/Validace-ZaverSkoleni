@@ -30,5 +30,11 @@ namespace TestProject
         {
             Assert.AreEqual(false, validator.SpravneHeslo("hesl"));
         }
+
+        [TestMethod]
+        public void MaPrazdneZnaky()
+        {
+            Assert.AreEqual(false, validator.SpravneHeslo(" "));
+        }
     }
 }
