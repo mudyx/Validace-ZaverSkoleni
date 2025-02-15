@@ -10,7 +10,7 @@ namespace TestProject
         [TestMethod]
         public void MaViceNezPet()
         {
-            Assert.AreEqual(true, validator.SpravneHeslo("wdok55wdwd"));
+            Assert.AreEqual(true, validator.SpravneHeslo("heslo123"));
         }
 
         [TestMethod]
@@ -22,7 +22,13 @@ namespace TestProject
         [TestMethod]
         public void MaCislo()
         {
-            Assert.AreEqual(false, validator.SpravneHeslo("hawdhhjawdh"));
+            Assert.AreEqual(false, validator.SpravneHeslo("heslo"));
+        }
+
+        [TestMethod]
+        public void MaMeneNezPet()
+        {
+            Assert.AreEqual(false, validator.SpravneHeslo("hesl"));
         }
     }
 }
